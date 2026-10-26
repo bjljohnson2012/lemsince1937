@@ -1,0 +1,253 @@
+.welcome {
+  background: var(--sand);
+  text-align: center;
+  padding: 4.5rem 1.25rem 4.2rem;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sectionTitle::after {
+  content: "";
+  display: block;
+  width: 3.1rem;
+  height: 3px;
+  margin: 0.75rem auto 0;
+  background: #1a1a1a;
+}
+
+.vision {
+  max-width: 40rem;
+  margin: 1.3rem auto 0;
+  font-size: 1.12rem;
+}
+
+.work {
+  padding: 4.2rem 1.25rem 4.5rem;
+  text-align: center;
+}
+
+.cards {
+  max-width: 920px;
+  margin: 2.2rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+}
+
+.card h3 {
+  margin: 1.1rem 0 0.35rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.card p {
+  margin: 0 auto 1rem;
+  max-width: 18rem;
+  color: var(--muted);
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 18px;
+  background: #ddd;
+}
+
+.ministry {
+  object-position: center 18%;
+}
+
+.band {
+  position: relative;
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+}
+
+.band img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bandShade {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 20, 28, 0.42);
+}
+
+.bandInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem 1.4rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.confKicker {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+
+.confMeta {
+  margin: 0;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.story {
+  background: #f6f4f1;
+  padding: 3.4rem 1.25rem 3.6rem;
+}
+
+.storyCard {
+  max-width: 860px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  padding: 1.55rem 1.4rem 1.4rem;
+  box-shadow: 0 10px 28px rgba(20, 32, 56, 0.06);
+}
+
+.storyKicker {
+  margin: 0 0 0.35rem;
+  text-align: center;
+  color: var(--gold);
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.storyCard h2 {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(1.55rem, 3vw, 2.05rem);
+  font-weight: 800;
+}
+
+.storyLede {
+  max-width: 36rem;
+  margin: 0.55rem auto 1.15rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #1c2430;
+}
+
+.frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.motto {
+  padding: 4rem 1.25rem 3.6rem;
+  text-align: center;
+}
+
+.mottoLine {
+  margin: 1.15rem 0 0.35rem;
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+}
+
+.disciple {
+  margin: 0 auto 1.2rem;
+  color: var(--muted);
+}
+
+.join {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+.join img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.joinShade {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 16, 24, 0.5);
+}
+
+.joinInner {
+  position: relative;
+  z-index: 1;
+  max-width: 52rem;
+  padding: 3rem 1.25rem;
+}
+
+.joinLabel {
+  margin: 0 0 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.join h2 {
+  margin: 0 0 1.4rem;
+  font-size: clamp(1.6rem, 3.4vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.joinActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .cards { grid-template-columns: 1fr; max-width: 420px; }
+}

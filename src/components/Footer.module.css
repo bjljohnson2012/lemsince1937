@@ -1,0 +1,82 @@
+.footer {
+  background: white;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.grid {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.4rem 1.25rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.label {
+  margin: 0 0 0.7rem;
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lead {
+  margin: 0 0 1rem;
+  max-width: 16rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.address p,
+.call p {
+  margin: 0.15rem 0;
+}
+
+.address a,
+.call a,
+.facebook {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.logo {
+  height: 84px;
+  width: auto;
+  margin-bottom: 0.8rem;
+}
+
+.call {
+  text-align: right;
+}
+
+.facebook {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 0.95rem;
+}
+
+.stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #cfcfcf 0 1px,
+    #f3f3f3 1px 8px
+  );
+  text-align: center;
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #333;
+  padding: 0.7rem 1rem;
+}
+
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; }
+  .call { text-align: left; }
+}

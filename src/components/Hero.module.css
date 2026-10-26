@@ -1,0 +1,122 @@
+.hero {
+  position: relative;
+  height: clamp(540px, 72vh, 780px);
+  overflow: hidden;
+  background: #1c2430;
+  color: white;
+}
+
+.poster,
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.video {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.videoOn {
+  opacity: 1;
+}
+
+.video::-webkit-media-controls,
+.video::-webkit-media-controls-enclosure,
+.video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+.panel {
+  position: absolute;
+  z-index: 1;
+  inset: 0 auto 0 0;
+  width: min(46rem, 64%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 20% 3rem clamp(1.4rem, 5vw, 4.2rem);
+  background: rgba(62, 70, 84, 0.58);
+  clip-path: polygon(0 0, 76% 0, 100% 100%, 0 100%);
+}
+
+.kicker {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+  font-size: clamp(0.78rem, 1.5vw, 0.98rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(4.6rem, 11vw, 8.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.88;
+}
+
+.since {
+  margin: 0.35rem 0 1.4rem;
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+  font-size: clamp(1.45rem, 3vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.8rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  background: var(--cream);
+  color: #2a2a2a;
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.pill:hover { background: white; }
+
+.hero :focus-visible { outline-color: white; }
+
+@media (max-width: 760px) {
+  .hero { height: auto; min-height: 520px; }
+
+  .panel {
+    width: 100%;
+    clip-path: none;
+    justify-content: flex-end;
+    padding: 1.4rem 1.15rem 1.5rem;
+    background: linear-gradient(
+      180deg,
+      rgba(20, 24, 32, 0.08) 0%,
+      rgba(28, 34, 44, 0.55) 42%,
+      rgba(28, 34, 44, 0.82) 100%
+    );
+  }
+
+  .title { font-size: clamp(3.6rem, 22vw, 5.4rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video { display: none; }
+}
